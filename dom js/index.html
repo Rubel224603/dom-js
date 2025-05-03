@@ -8,30 +8,53 @@
 </head>
 <body>
     <h1 id="heading">Hello Bangladesh</h1>
+    <p id="paraText"></p>
     <button id="btn">click</button>
     <input type="text" id="firstNumber">
     <input type="text" id="lastNumber">
-    <input type="button" id="submit" value="SUM">
+    <input type="button" id="sumBtn" value="SUM">
+
+    <button  id="clcikMe">Click Me</button>
+    <p  id="jstClick">Just Click</p>
+    <p id="showResut"></p>
+
     <script>
 
         //alert('hello');
         document.getElementById('btn').onclick=(function(){
            $show = document.getElementById('heading').innerText="Siam is  a Js Expert";
-           document.write($show);
+           document.write(show);
         });
 
-        document.getElementById('submit').onclick=(function(){
-            $firstNumber = document.getElementById('firstNumber').value;
-            $lastNumber = document.getElementById('lastNumber').value;
-            $sum = $firstNumber + $lastNumber;
-            alert($sum);
+        document.getElementById('sumBtn').onclick=(function(){
+            var firstNumber = document.getElementById('firstNumber').value;
+            var lastNumber = document.getElementById('lastNumber').value;
+            var sum = firstNumber + lastNumber;
+            alert(sum);
         });
         
        // document.getElementById('heading').innerHTML="I am Rubel";
         document.getElementById('heading').innerText += "I am Rubel";
+        document.getElementById('paraText').innerText= "Hell paragraphp it's from Dom";
 
 
+       document.getElementById('clcikMe').addEventListener('click',add);
+        
 
+        function add(){
+            let a= 50;
+            let b=10;
+            let sum = a+b;
+            alert(sum);
+        }
+
+        document.getElementById('jstClick').addEventListener('click',show);
+
+        function show(){
+            document.getElementById("showResut").innerHTML= "<h1>Yes I am Result</h1>";
+        }
+
+       
 
 
     </script>
