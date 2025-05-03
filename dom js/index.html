@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Practice</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 id="heading">Hello Bangladesh</h1>
+    <button id="btn">click</button>
+    <input type="text" id="firstNumber">
+    <input type="text" id="lastNumber">
+    <input type="button" id="submit" value="SUM">
+    <script>
+
+        //alert('hello');
+        document.getElementById('btn').onclick=(function(){
+           $show = document.getElementById('heading').innerText="Siam is  a Js Expert";
+           document.write($show);
+        });
+
+        document.getElementById('submit').onclick=(function(){
+            $firstNumber = document.getElementById('firstNumber').value;
+            $lastNumber = document.getElementById('lastNumber').value;
+            $sum = $firstNumber + $lastNumber;
+            alert($sum);
+        });
+        
+       // document.getElementById('heading').innerHTML="I am Rubel";
+        document.getElementById('heading').innerText += "I am Rubel";
+
+
+
+
+
+    </script>
+</body>
+</html>
